@@ -330,6 +330,10 @@ impl Component {
         &self.inner.static_modules[idx]
     }
 
+    pub fn static_modules(&self) -> &PrimaryMap<StaticModuleIndex, Module> {
+        &self.inner.static_modules
+    }
+
     #[inline]
     pub(crate) fn types(&self) -> &Arc<ComponentTypes> {
         self.inner.component_types()
